@@ -161,6 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const { total, breakdown } = calcScore();
 
+    // ── Populate hidden score fields so Netlify captures them ──
+    document.getElementById('score_total').value      = total + '/100';
+    document.getElementById('score_categoria').value  =
+      total >= 80 ? '⭐ EXCELENTE CANDIDATA' :
+      total >= 60 ? '✅ BUENA CANDIDATA'     :
+      total >= 40 ? '⚠️ EVALUACIÓN ADICIONAL': '❌ NO PRIORITARIA';
+    document.getElementById('score_logistica').value      = (breakdown['Estabilidad y Logística']?.score  ?? 0) + '/20';
+    document.getElementById('score_experiencia').value    = (breakdown['Experiencia Técnica']?.score      ?? 0) + '/20';
+    document.getElementById('score_disponibilidad').value = (breakdown['Disponibilidad']?.score           ?? 0) + '/15';
+    document.getElementById('score_servicio').value       = (breakdown['Orientación al Servicio']?.score  ?? 0) + '/15';
+    document.getElementById('score_personalidad').value   = (breakdown['Personalidad y Valores']?.score   ?? 0) + '/15';
+    document.getElementById('score_motivacion').value     = (breakdown['Motivación y Compatibilidad']?.score ?? 0) + '/15';
+
+    // ── Submit to Netlify via fetch (AJAX — page won't reload) ──
+    const formData = new FormData(form);
+    fetch('/', { method: 'POST', body: formData })
+      .catch(() => {}); // fire-and-forget; Netlify queues it
+
+    // ── Show result modal ──
     let emoji, badge, badgeClass, title, message;
     if (total >= 80) {
       emoji = '⭐'; badge = 'EXCELENTE CANDIDATA'; badgeClass = 'badge-excellent';
@@ -199,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.result-overlay').classList.add('active');
   });
+
 
   document.querySelector('.btn-close').addEventListener('click', () => {
     document.querySelector('.result-overlay').classList.remove('active');

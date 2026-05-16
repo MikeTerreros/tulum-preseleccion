@@ -32,7 +32,18 @@
 
 <!-- FORM -->
 <div class="form-container">
-<form id="tuluForm" novalidate>
+<form id="tuluForm" name="preseleccion-tulum" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="preseleccion-tulum"/>
+  <input type="hidden" name="bot-field" style="display:none"/>
+  <!-- Campos de puntaje calculado (ocultos, visibles en Netlify) -->
+  <input type="hidden" id="score_total" name="PUNTAJE_TOTAL"/>
+  <input type="hidden" id="score_categoria" name="CATEGORIA"/>
+  <input type="hidden" id="score_logistica" name="Estabilidad_Logistica"/>
+  <input type="hidden" id="score_experiencia" name="Experiencia_Tecnica"/>
+  <input type="hidden" id="score_disponibilidad" name="Disponibilidad"/>
+  <input type="hidden" id="score_servicio" name="Orientacion_Servicio"/>
+  <input type="hidden" id="score_personalidad" name="Personalidad_Valores"/>
+  <input type="hidden" id="score_motivacion" name="Motivacion_Compatibilidad"/>
 
 <!-- ===== SECCIÓN 1: INFORMACIÓN BÁSICA ===== -->
 <div class="form-section">
