@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Formulario de Preselección – TULUM Beauty Salon</title>
+<meta name="description" content="Formulario de preselección para candidatas a trabajar en TULUM Beauty Salon. Talento, actitud y vocación de servicio."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="form-header">
+  <div class="header-logo">
+    <img src="tulum-logo.png" alt="TULUM Beauty Salon"/>
+  </div>
+  <h1>FORMULARIO DE PRESELECCIÓN</h1>
+  <p>Candidatas · TULUM Beauty Salon</p>
+</header>
+
+<!-- PROGRESS -->
+<div class="progress-bar">
+  <span class="progress-label">Tu progreso</span>
+  <div class="progress-track"><div class="progress-fill"></div></div>
+  <span class="progress-pct">0%</span>
+</div>
+
+<!-- INTRO -->
+<div class="intro-card">
+  <p>En <strong>TULUM Beauty Salon</strong> buscamos personas con talento, excelente actitud, atención al detalle y ganas de crecer profesionalmente. No es necesario dominar todas las técnicas — ofrecemos capacitación continua. Más allá de la experiencia, valoramos la <strong>responsabilidad, la honestidad</strong> y el deseo genuino de brindar una experiencia excepcional a cada clienta.</p>
+</div>
+
+<!-- FORM -->
+<div class="form-container">
+<form id="tuluForm" novalidate>
+
+<!-- ===== SECCIÓN 1: INFORMACIÓN BÁSICA ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">1</div>
+    <h2 class="section-title">Información Básica</h2>
+    <span class="section-icon">🌿</span>
+  </div>
+
+  <div class="field-row">
+    <div class="field-group">
+      <label class="field-label required" for="full_name">Nombre completo</label>
+      <input class="form-input" type="text" id="full_name" name="full_name" placeholder="Tu nombre completo" required/>
+    </div>
+    <div class="field-group">
+      <label class="field-label required" for="whatsapp">WhatsApp</label>
+      <input class="form-input" type="tel" id="whatsapp" name="whatsapp" placeholder="Ej. 300 123 4567" required/>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Edad</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="age" id="age1" value="18-22" required/><label class="option-label" for="age1"><span class="option-indicator"></span>18 – 22 años</label></div>
+      <div class="option-card"><input type="radio" name="age" id="age2" value="23-28"/><label class="option-label" for="age2"><span class="option-indicator"></span>23 – 28 años</label></div>
+      <div class="option-card"><input type="radio" name="age" id="age3" value="29-35"/><label class="option-label" for="age3"><span class="option-indicator"></span>29 – 35 años</label></div>
+      <div class="option-card"><input type="radio" name="age" id="age4" value="36+"/><label class="option-label" for="age4"><span class="option-indicator"></span>36 años o más</label></div>
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field-group">
+      <label class="field-label required" for="neighborhood">Barrio donde vives</label>
+      <input class="form-input" type="text" id="neighborhood" name="neighborhood" placeholder="Ej. Chapinero, Suba..." required/>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="instagram">Instagram o portafolio <span style="color:var(--gray);font-weight:300">(opcional)</span></label>
+      <input class="form-input" type="text" id="instagram" name="instagram" placeholder="@tuinstagram o enlace"/>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 2: ESTABILIDAD Y LOGÍSTICA ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">2</div>
+    <h2 class="section-title">Estabilidad y Logística</h2>
+    <span class="section-icon">📍</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Tiempo estimado de desplazamiento al salón</label>
+    <div class="options-grid two-col">
+      <div class="option-card"><input type="radio" name="commute" id="c0" value="0" required/><label class="option-label" for="c0"><span class="option-indicator"></span>Menos de 30 min</label></div>
+      <div class="option-card"><input type="radio" name="commute" id="c1" value="1"/><label class="option-label" for="c1"><span class="option-indicator"></span>30 – 45 min</label></div>
+      <div class="option-card"><input type="radio" name="commute" id="c2" value="2"/><label class="option-label" for="c2"><span class="option-indicator"></span>45 – 60 min</label></div>
+      <div class="option-card"><input type="radio" name="commute" id="c3" value="3"/><label class="option-label" for="c3"><span class="option-indicator"></span>Más de 60 min</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Medio de transporte principal</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="transport" id="t0" value="walk" required/><label class="option-label" for="t0"><span class="option-indicator"></span>🚶 Caminando</label></div>
+      <div class="option-card"><input type="radio" name="transport" id="t1" value="bike"/><label class="option-label" for="t1"><span class="option-indicator"></span>🚲 Bicicleta</label></div>
+      <div class="option-card"><input type="radio" name="transport" id="t2" value="moto"/><label class="option-label" for="t2"><span class="option-indicator"></span>🛵 Moto</label></div>
+      <div class="option-card"><input type="radio" name="transport" id="t3" value="bus"/><label class="option-label" for="t3"><span class="option-indicator"></span>🚌 TransMilenio/SITP</label></div>
+      <div class="option-card"><input type="radio" name="transport" id="t4" value="car"/><label class="option-label" for="t4"><span class="option-indicator"></span>🚗 Carro</label></div>
+      <div class="option-card"><input type="radio" name="transport" id="t5" value="other"/><label class="option-label" for="t5"><span class="option-indicator"></span>Otro</label></div>
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field-group">
+      <label class="field-label required">¿Tienes hijos?</label>
+      <div class="options-grid two-col">
+        <div class="option-card"><input type="radio" name="children" id="ch1" value="yes" required/><label class="option-label" for="ch1"><span class="option-indicator"></span>Sí</label></div>
+        <div class="option-card"><input type="radio" name="children" id="ch2" value="no"/><label class="option-label" for="ch2"><span class="option-indicator"></span>No</label></div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label required">Si tienes hijos, ¿cuentas con apoyo confiable para su cuidado?</label>
+      <div class="options-grid one-col">
+        <div class="option-card"><input type="radio" name="childcare" id="cc1" value="yes" required/><label class="option-label" for="cc1"><span class="option-indicator"></span>Sí</label></div>
+        <div class="option-card"><input type="radio" name="childcare" id="cc2" value="no"/><label class="option-label" for="cc2"><span class="option-indicator"></span>No</label></div>
+        <div class="option-card"><input type="radio" name="childcare" id="cc3" value="na"/><label class="option-label" for="cc3"><span class="option-indicator"></span>No aplica</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Con qué frecuencia has cambiado de trabajo en los últimos 2 años?</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="job_changes" id="jc0" value="0" required/><label class="option-label" for="jc0"><span class="option-indicator"></span>No he cambiado</label></div>
+      <div class="option-card"><input type="radio" name="job_changes" id="jc1" value="1"/><label class="option-label" for="jc1"><span class="option-indicator"></span>1 vez</label></div>
+      <div class="option-card"><input type="radio" name="job_changes" id="jc2" value="2"/><label class="option-label" for="jc2"><span class="option-indicator"></span>2 veces</label></div>
+      <div class="option-card"><input type="radio" name="job_changes" id="jc3" value="3"/><label class="option-label" for="jc3"><span class="option-indicator"></span>3 o más veces</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 3: SITUACIÓN LABORAL ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">3</div>
+    <h2 class="section-title">Situación Laboral Actual</h2>
+    <span class="section-icon">💼</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Actualmente trabajas?</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="currently_working" id="w1" value="yes" required/><label class="option-label" for="w1"><span class="option-indicator"></span>Sí, tiempo completo</label></div>
+      <div class="option-card"><input type="radio" name="currently_working" id="w2" value="part"/><label class="option-label" for="w2"><span class="option-indicator"></span>Sí, medio tiempo</label></div>
+      <div class="option-card"><input type="radio" name="currently_working" id="w3" value="freelance"/><label class="option-label" for="w3"><span class="option-indicator"></span>Independiente</label></div>
+      <div class="option-card"><input type="radio" name="currently_working" id="w4" value="no"/><label class="option-label" for="w4"><span class="option-indicator"></span>No trabajo actualmente</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Qué buscas en este momento? <span class="field-hint">(elige hasta 3)</span></label>
+    <div class="options-grid">
+      <div class="option-card"><input type="checkbox" name="seeking" id="s1" value="stability"/><label class="option-label" for="s1"><span class="option-indicator"></span>Estabilidad</label></div>
+      <div class="option-card"><input type="checkbox" name="seeking" id="s2" value="income"/><label class="option-label" for="s2"><span class="option-indicator"></span>Mayores ingresos</label></div>
+      <div class="option-card"><input type="checkbox" name="seeking" id="s3" value="learn"/><label class="option-label" for="s3"><span class="option-indicator"></span>Aprender técnicas</label></div>
+      <div class="option-card"><input type="checkbox" name="seeking" id="s4" value="environment"/><label class="option-label" for="s4"><span class="option-indicator"></span>Mejor ambiente laboral</label></div>
+      <div class="option-card"><input type="checkbox" name="seeking" id="s5" value="growth"/><label class="option-label" for="s5"><span class="option-indicator"></span>Crecimiento profesional</label></div>
+      <div class="option-card"><input type="checkbox" name="seeking" id="s6" value="other_seek"/><label class="option-label" for="s6"><span class="option-indicator"></span>Otro</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 4: EXPERIENCIA TÉCNICA ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">4</div>
+    <h2 class="section-title">Experiencia Técnica</h2>
+    <span class="section-icon">💅</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Años de experiencia en nail art / estética</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="years_exp" id="y0" value="0" required/><label class="option-label" for="y0"><span class="option-indicator"></span>Sin experiencia</label></div>
+      <div class="option-card"><input type="radio" name="years_exp" id="y1" value="1"/><label class="option-label" for="y1"><span class="option-indicator"></span>Menos de 1 año</label></div>
+      <div class="option-card"><input type="radio" name="years_exp" id="y2" value="2"/><label class="option-label" for="y2"><span class="option-indicator"></span>1 – 2 años</label></div>
+      <div class="option-card"><input type="radio" name="years_exp" id="y3" value="3"/><label class="option-label" for="y3"><span class="option-indicator"></span>2 – 4 años</label></div>
+      <div class="option-card"><input type="radio" name="years_exp" id="y4" value="4"/><label class="option-label" for="y4"><span class="option-indicator"></span>Más de 4 años</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">Servicios que dominas <span class="field-hint">(selecciona todos los que apliquen)</span></label>
+    <div class="tags-grid">
+      <div class="tag-option"><input type="checkbox" name="services" id="sv1" value="semiperm"/><label class="tag-label" for="sv1">Semipermanente</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv2" value="acrylic"/><label class="tag-label" for="sv2">Acrílico</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv3" value="gel"/><label class="tag-label" for="sv3">Gel / Builder Gel</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv4" value="polygel"/><label class="tag-label" for="sv4">Polígel</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv5" value="nailart"/><label class="tag-label" for="sv5">Nail Art</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv6" value="manicure"/><label class="tag-label" for="sv6">Manicure tradicional</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv7" value="pedicure"/><label class="tag-label" for="sv7">Pedicure</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv8" value="chrome"/><label class="tag-label" for="sv8">Cromo / Efecto espejo</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv9" value="extensions"/><label class="tag-label" for="sv9">Extensiones</label></div>
+      <div class="tag-option"><input type="checkbox" name="services" id="sv10" value="none_svc"/><label class="tag-label" for="sv10">Ninguno aún</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">Técnicas que deseas aprender</label>
+    <div class="tags-grid">
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl1" value="3d"/><label class="tag-label" for="tl1">Nail Art 3D</label></div>
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl2" value="acrylic_adv"/><label class="tag-label" for="tl2">Acrílico avanzado</label></div>
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl3" value="gel_adv"/><label class="tag-label" for="tl3">Gel avanzado</label></div>
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl4" value="ombre"/><label class="tag-label" for="tl4">Ombré / Degradé</label></div>
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl5" value="textures"/><label class="tag-label" for="tl5">Texturas y efectos</label></div>
+      <div class="tag-option"><input type="checkbox" name="to_learn" id="tl6" value="all"/><label class="tag-label" for="tl6">Todo lo que pueda</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">Nivel de confianza en mis habilidades técnicas</label>
+    <div class="scale-row">
+      <span class="scale-name">Confianza técnica</span>
+      <input type="range" class="scale-input" id="confidence_level" name="confidence_level" min="1" max="10" value="5"/>
+      <span class="scale-value" id="confidence_level_display">5</span>
+    </div>
+    <p class="text-hint">1 = Soy principiante &nbsp;·&nbsp; 10 = Domino mis técnicas con seguridad</p>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 5: DISPONIBILIDAD ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">5</div>
+    <h2 class="section-title">Disponibilidad</h2>
+    <span class="section-icon">🗓️</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Tipo de horario disponible</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch1" value="full" required/><label class="option-label" for="sch1"><span class="option-indicator"></span>Tiempo completo</label></div>
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch2" value="part_am"/><label class="option-label" for="sch2"><span class="option-indicator"></span>Medio tiempo (mañana)</label></div>
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch3" value="part_pm"/><label class="option-label" for="sch3"><span class="option-indicator"></span>Medio tiempo (tarde)</label></div>
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch4" value="flex"/><label class="option-label" for="sch4"><span class="option-indicator"></span>Horario flexible</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Disponibilidad fines de semana</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="weekend_availability" id="wa1" value="both" required/><label class="option-label" for="wa1"><span class="option-indicator"></span>Sábado y domingo</label></div>
+      <div class="option-card"><input type="radio" name="weekend_availability" id="wa2" value="saturday"/><label class="option-label" for="wa2"><span class="option-indicator"></span>Solo sábado</label></div>
+      <div class="option-card"><input type="radio" name="weekend_availability" id="wa3" value="sunday"/><label class="option-label" for="wa3"><span class="option-indicator"></span>Solo domingo</label></div>
+      <div class="option-card"><input type="radio" name="weekend_availability" id="wa4" value="none"/><label class="option-label" for="wa4"><span class="option-indicator"></span>No disponible</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required" for="start_date">¿Cuándo podrías iniciar?</label>
+    <select class="form-select" id="start_date" name="start_date" required>
+      <option value="">Selecciona una opción...</option>
+      <option value="immediate">De inmediato</option>
+      <option value="1week">En 1 semana</option>
+      <option value="2weeks">En 2 semanas</option>
+      <option value="1month">En 1 mes</option>
+      <option value="more">Más de 1 mes</option>
+    </select>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 6: SERVICIO AL CLIENTE ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">6</div>
+    <h2 class="section-title">Servicio al Cliente</h2>
+    <span class="section-icon">🌸</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">Si una clienta expresa inconformidad, ¿qué harías primero?</label>
+    <div class="options-grid one-col">
+      <div class="option-card"><input type="radio" name="complaint_response" id="cr1" value="listen" required/><label class="option-label" for="cr1"><span class="option-indicator"></span>Escucharla con calma y sin interrumpirla</label></div>
+      <div class="option-card"><input type="radio" name="complaint_response" id="cr2" value="solution"/><label class="option-label" for="cr2"><span class="option-indicator"></span>Ofrecer una solución de inmediato</label></div>
+      <div class="option-card"><input type="radio" name="complaint_response" id="cr3" value="supervisor"/><label class="option-label" for="cr3"><span class="option-indicator"></span>Pedir apoyo al supervisor/a</label></div>
+      <div class="option-card"><input type="radio" name="complaint_response" id="cr4" value="explain"/><label class="option-label" for="cr4"><span class="option-indicator"></span>Explicar el procedimiento realizado</label></div>
+      <div class="option-card"><input type="radio" name="complaint_response" id="cr5" value="nervous"/><label class="option-label" for="cr5"><span class="option-indicator"></span>Me siento nerviosa en estas situaciones</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">¿Qué consideras más importante en el servicio? <span class="field-hint">(elige hasta 3)</span></label>
+    <div class="tags-grid">
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_1" value="punctuality"/><label class="tag-label" for="sv_1">Puntualidad</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_2" value="cleanliness"/><label class="tag-label" for="sv_2">Limpieza</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_3" value="kindness"/><label class="tag-label" for="sv_3">Amabilidad</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_4" value="detail"/><label class="tag-label" for="sv_4">Atención al detalle</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_5" value="listen"/><label class="tag-label" for="sv_5">Escuchar a la clienta</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_6" value="technique"/><label class="tag-label" for="sv_6">Técnica</label></div>
+      <div class="tag-option"><input type="checkbox" name="service_values" id="sv_7" value="communication"/><label class="tag-label" for="sv_7">Comunicación clara</label></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== SECCIÓN 7: PERSONALIDAD Y VALORES ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">7</div>
+    <h2 class="section-title">Personalidad y Valores</h2>
+    <span class="section-icon">✨</span>
+  </div>
+  <p style="font-size:0.88rem;color:var(--gray);margin-bottom:20px;">Evalúate del 1 al 10 en cada cualidad &nbsp;·&nbsp; 1 = Por desarrollar &nbsp;·&nbsp; 10 = Mi mayor fortaleza</p>
+
+  <div class="scale-group">
+    <div class="scale-row"><span class="scale-name">⏰ Puntualidad</span><input type="range" class="scale-input" id="punctuality_scale" name="punctuality_scale" min="1" max="10" value="7"/><span class="scale-value" id="punctuality_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">🎯 Responsabilidad</span><input type="range" class="scale-input" id="responsibility_scale" name="responsibility_scale" min="1" max="10" value="7"/><span class="scale-value" id="responsibility_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">📋 Organización</span><input type="range" class="scale-input" id="organization_scale" name="organization_scale" min="1" max="10" value="7"/><span class="scale-value" id="organization_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">🌿 Paciencia</span><input type="range" class="scale-input" id="patience_scale" name="patience_scale" min="1" max="10" value="7"/><span class="scale-value" id="patience_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">🔍 Atención al detalle</span><input type="range" class="scale-input" id="detail_scale" name="detail_scale" min="1" max="10" value="7"/><span class="scale-value" id="detail_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">💬 Recibir retroalimentación</span><input type="range" class="scale-input" id="feedback_scale" name="feedback_scale" min="1" max="10" value="7"/><span class="scale-value" id="feedback_scale_display">7</span></div>
+    <div class="scale-row"><span class="scale-name">📚 Ganas de aprender</span><input type="range" class="scale-input" id="learning_scale" name="learning_scale" min="1" max="10" value="8"/><span class="scale-value" id="learning_scale_display">8</span></div>
+  </div>
+
+  <div class="field-group mt-12">
+    <label class="field-label">¿Qué palabras te describen mejor? <span class="field-hint">(elige las que apliquen)</span></label>
+    <div class="tags-grid">
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt1" value="perfectionist"/><label class="tag-label" for="pt1">Perfeccionista</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt2" value="kind"/><label class="tag-label" for="pt2">Amable</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt3" value="responsible"/><label class="tag-label" for="pt3">Responsable</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt4" value="calm"/><label class="tag-label" for="pt4">Tranquila</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt5" value="creative"/><label class="tag-label" for="pt5">Creativa</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt6" value="organized"/><label class="tag-label" for="pt6">Organizada</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt7" value="extrovert"/><label class="tag-label" for="pt7">Extrovertida</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt8" value="empathic"/><label class="tag-label" for="pt8">Empática</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt9" value="disciplined"/><label class="tag-label" for="pt9">Disciplinada</label></div>
+      <div class="tag-option"><input type="checkbox" name="personality_tags" id="pt10" value="proactive"/><label class="tag-label" for="pt10">Proactiva</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 8: MOTIVACIÓN ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">8</div>
+    <h2 class="section-title">Motivación y Ambición</h2>
+    <span class="section-icon">🚀</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">¿Qué te motiva más a trabajar? <span class="field-hint">(elige hasta 3)</span></label>
+    <div class="options-grid">
+      <div class="option-card"><input type="checkbox" name="motivations" id="m1" value="family"/><label class="option-label" for="m1"><span class="option-indicator"></span>Apoyar a mi familia</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m2" value="independence"/><label class="option-label" for="m2"><span class="option-indicator"></span>Independencia económica</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m3" value="learn"/><label class="option-label" for="m3"><span class="option-indicator"></span>Aprender constantemente</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m4" value="save"/><label class="option-label" for="m4"><span class="option-indicator"></span>Ahorrar</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m5" value="grow"/><label class="option-label" for="m5"><span class="option-indicator"></span>Crecer profesionalmente</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m6" value="goals"/><label class="option-label" for="m6"><span class="option-indicator"></span>Cumplir metas personales</label></div>
+      <div class="option-card"><input type="checkbox" name="motivations" id="m7" value="proud"/><label class="option-label" for="m7"><span class="option-indicator"></span>Sentirme orgullosa de mi trabajo</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Dónde te gustaría estar en 2 años?</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="future_vision" id="fv1" value="specialist" required/><label class="option-label" for="fv1"><span class="option-indicator"></span>Especialista en uñas</label></div>
+      <div class="option-card"><input type="radio" name="future_vision" id="fv2" value="manager"/><label class="option-label" for="fv2"><span class="option-indicator"></span>Encargada de salón</label></div>
+      <div class="option-card"><input type="radio" name="future_vision" id="fv3" value="stable"/><label class="option-label" for="fv3"><span class="option-indicator"></span>Con ingresos estables</label></div>
+      <div class="option-card"><input type="radio" name="future_vision" id="fv4" value="entrepreneur"/><label class="option-label" for="fv4"><span class="option-indicator"></span>Emprender mi propio negocio</label></div>
+      <div class="option-card"><input type="radio" name="future_vision" id="fv5" value="keep_learning"/><label class="option-label" for="fv5"><span class="option-indicator"></span>Seguir aprendiendo</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 9: EXPECTATIVAS LABORALES ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">9</div>
+    <h2 class="section-title">Expectativas Laborales</h2>
+    <span class="section-icon">⚖️</span>
+  </div>
+  <div class="field-group">
+    <label class="field-label">¿Qué valoras más en un trabajo? <span class="field-hint">(elige hasta 3)</span></label>
+    <div class="options-grid">
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv1" value="environment"/><label class="option-label" for="wv1"><span class="option-indicator"></span>Buen ambiente</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv2" value="income"/><label class="option-label" for="wv2"><span class="option-indicator"></span>Ingresos</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv3" value="stability"/><label class="option-label" for="wv3"><span class="option-indicator"></span>Estabilidad</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv4" value="training"/><label class="option-label" for="wv4"><span class="option-indicator"></span>Capacitación continua</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv5" value="flexibility"/><label class="option-label" for="wv5"><span class="option-indicator"></span>Flexibilidad</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv6" value="recognition"/><label class="option-label" for="wv6"><span class="option-indicator"></span>Reconocimiento</label></div>
+      <div class="option-card"><input type="checkbox" name="work_values" id="wv7" value="growth_op"/><label class="option-label" for="wv7"><span class="option-indicator"></span>Oportunidad de crecimiento</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 10: PORTAFOLIO ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">10</div>
+    <h2 class="section-title">Portafolio</h2>
+    <span class="section-icon">🖼️</span>
+  </div>
+  <div class="field-group">
+    <label class="field-label required">¿Tienes fotos de tu trabajo?</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="has_portfolio" id="hp1" value="yes_insta" required/><label class="option-label" for="hp1"><span class="option-indicator"></span>Sí, en Instagram</label></div>
+      <div class="option-card"><input type="radio" name="has_portfolio" id="hp2" value="yes_photos"/><label class="option-label" for="hp2"><span class="option-indicator"></span>Sí, tengo fotos guardadas</label></div>
+      <div class="option-card"><input type="radio" name="has_portfolio" id="hp3" value="building"/><label class="option-label" for="hp3"><span class="option-indicator"></span>Estoy construyendo mi portafolio</label></div>
+      <div class="option-card"><input type="radio" name="has_portfolio" id="hp4" value="no"/><label class="option-label" for="hp4"><span class="option-indicator"></span>Aún no tengo</label></div>
+    </div>
+  </div>
+  <div class="field-group">
+    <label class="field-label" for="portfolio_link">Enlace a Instagram o portafolio <span style="color:var(--gray);font-weight:300">(opcional)</span></label>
+    <input class="form-input" type="text" id="portfolio_link" name="portfolio_link" placeholder="@tuinstagram o URL de portafolio"/>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 11: COMPATIBILIDAD TULUM ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">11</div>
+    <h2 class="section-title">Compatibilidad con TULUM</h2>
+    <span class="section-icon">🌊</span>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Qué aspecto del concepto TULUM te atrae más?</label>
+    <div class="options-grid one-col">
+      <div class="option-card"><input type="radio" name="tulum_aspect" id="ta1" value="premium" required/><label class="option-label" for="ta1"><span class="option-indicator"></span>Ambiente premium y cuidado al detalle</label></div>
+      <div class="option-card"><input type="radio" name="tulum_aspect" id="ta2" value="training"/><label class="option-label" for="ta2"><span class="option-indicator"></span>Capacitación continua y crecimiento profesional</label></div>
+      <div class="option-card"><input type="radio" name="tulum_aspect" id="ta3" value="detail"/><label class="option-label" for="ta3"><span class="option-indicator"></span>Los estándares altos y protocolos claros</label></div>
+      <div class="option-card"><input type="radio" name="tulum_aspect" id="ta4" value="wellness"/><label class="option-label" for="ta4"><span class="option-indicator"></span>El enfoque en bienestar y rituales</label></div>
+      <div class="option-card"><input type="radio" name="tulum_aspect" id="ta5" value="opportunity"/><label class="option-label" for="ta5"><span class="option-indicator"></span>La oportunidad de crecer dentro de la marca</label></div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label required">¿Qué tan importante es para ti trabajar con protocolos claros y estándares altos?</label>
+    <div class="options-grid">
+      <div class="option-card"><input type="radio" name="protocols_importance" id="pi0" value="0" required/><label class="option-label" for="pi0"><span class="option-indicator"></span>Nada importante</label></div>
+      <div class="option-card"><input type="radio" name="protocols_importance" id="pi1" value="1"/><label class="option-label" for="pi1"><span class="option-indicator"></span>Poco importante</label></div>
+      <div class="option-card"><input type="radio" name="protocols_importance" id="pi2" value="2"/><label class="option-label" for="pi2"><span class="option-indicator"></span>Importante</label></div>
+      <div class="option-card"><input type="radio" name="protocols_importance" id="pi3" value="3"/><label class="option-label" for="pi3"><span class="option-indicator"></span>Muy importante</label></div>
+      <div class="option-card"><input type="radio" name="protocols_importance" id="pi4" value="4"/><label class="option-label" for="pi4"><span class="option-indicator"></span>Fundamental para mí</label></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECCIÓN 12: CONFIRMACIÓN FINAL ===== -->
+<div class="form-section">
+  <div class="section-header">
+    <div class="section-number">12</div>
+    <h2 class="section-title">Confirmación Final</h2>
+    <span class="section-icon">💫</span>
+  </div>
+
+  <div class="confirm-check">
+    <input type="checkbox" id="commit_training" name="commit_training" required/>
+    <label for="commit_training">Me comprometo a asistir puntualmente a las capacitaciones y a seguir los protocolos del salón, entendiendo que son parte fundamental de la calidad TULUM.</label>
+  </div>
+
+  <div class="confirm-check">
+    <input type="checkbox" id="data_consent" name="data_consent" required/>
+    <label for="data_consent">Autorizo a <strong>TULUM Beauty Salon</strong> a contactarme a través de WhatsApp u otros medios para continuar con el proceso de selección.</label>
+  </div>
+
+  <div style="margin-top:28px;padding:20px;background:linear-gradient(135deg,rgba(26,53,96,0.05),rgba(184,115,46,0.05));border-radius:12px;border:1px solid var(--border);text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy);margin-bottom:6px;">"Más allá de las técnicas, buscamos personas con alma."</p>
+    <p style="font-size:0.82rem;color:var(--gray);">— TULUM Beauty Salon</p>
+  </div>
+
+  <div class="submit-area">
+    <button type="submit" class="btn-submit" id="submitBtn">
+      <span>Enviar mi Formulario</span>
+      <span>🌊</span>
+    </button>
+    <p style="font-size:0.8rem;color:var(--gray);margin-top:14px;">Nos pondremos en contacto contigo dentro de los próximos 3 días hábiles.</p>
+  </div>
+</div>
+
+</form>
+</div>
+
+<!-- FOOTER -->
+<footer class="form-footer">
+  <p>© 2025 <strong>TULUM Beauty Salon</strong> · Formulario de Preselección Confidencial</p>
+  <p style="margin-top:6px;">La información proporcionada será utilizada únicamente con fines del proceso de selección.</p>
+</footer>
+
+<!-- RESULT MODAL -->
+<div class="result-overlay" id="resultOverlay">
+  <div class="result-card">
+    <span class="result-emoji" id="resultEmoji">⭐</span>
+    <div class="result-badge badge-excellent" id="resultBadge">EXCELENTE CANDIDATA</div>
+    <div class="result-score" id="resultScore">85</div>
+    <div class="result-score-label">puntos de 100</div>
+    <h3 class="result-title" id="resultTitle">¡Una candidata excepcional!</h3>
+    <p class="result-message" id="resultMessage">Descripción del resultado.</p>
+    <div class="score-breakdown">
+      <div class="score-breakdown-title">Desglose por categoría</div>
+      <div class="score-breakdown-items" id="scoreBreakdown"></div>
+    </div>
+    <button class="btn-close" onclick="document.getElementById('resultOverlay').classList.remove('active')">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
