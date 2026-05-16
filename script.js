@@ -179,45 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('/', { method: 'POST', body: formData })
       .catch(() => {}); // fire-and-forget; Netlify queues it
 
-    // ── Show result modal ──
-    let emoji, badge, badgeClass, title, message;
-    if (total >= 80) {
-      emoji = '⭐'; badge = 'EXCELENTE CANDIDATA'; badgeClass = 'badge-excellent';
-      title = '¡Una candidata excepcional!';
-      message = 'Su perfil destaca por su compromiso, vocación de servicio y alineación con los valores de TULUM. Recomendamos continuar con el proceso de selección prioritariamente.';
-    } else if (total >= 60) {
-      emoji = '✅'; badge = 'BUENA CANDIDATA'; badgeClass = 'badge-good';
-      title = 'Perfil prometedor';
-      message = 'Muestra buenas aptitudes y motivación. Recomendamos una entrevista para profundizar en algunos aspectos de su perfil.';
-    } else if (total >= 40) {
-      emoji = '⚠️'; badge = 'EVALUACIÓN ADICIONAL'; badgeClass = 'badge-review';
-      title = 'Requiere evaluación adicional';
-      message = 'El perfil presenta áreas a reforzar. Se sugiere una conversación directa antes de avanzar en el proceso.';
-    } else {
-      emoji = '❌'; badge = 'NO PRIORITARIA'; badgeClass = 'badge-low';
-      title = 'Perfil no prioritario';
-      message = 'En este momento su perfil no se alinea con las necesidades inmediatas de TULUM Nail Studio.';
-    }
-
-    document.querySelector('.result-emoji').textContent = emoji;
-    const badgeEl = document.querySelector('.result-badge');
-    badgeEl.textContent = badge;
-    badgeEl.className = 'result-badge ' + badgeClass;
-    document.querySelector('.result-score').textContent = total;
-    document.querySelector('.result-title').textContent = title;
-    document.querySelector('.result-message').textContent = message;
-
-    const breakdownEl = document.querySelector('.score-breakdown-items');
-    breakdownEl.innerHTML = '';
-    Object.entries(breakdown).forEach(([key, val]) => {
-      const div = document.createElement('div');
-      div.className = 'score-item';
-      div.innerHTML = `<span>${key}</span><span>${val.score}/${val.max}</span>`;
-      breakdownEl.appendChild(div);
-    });
-
+    // ── Show thank-you modal (candidate never sees score) ──
     document.querySelector('.result-overlay').classList.add('active');
   });
+
 
 
   document.querySelector('.btn-close').addEventListener('click', () => {
