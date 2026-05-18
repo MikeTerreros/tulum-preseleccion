@@ -176,8 +176,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Submit to Netlify via fetch (AJAX — page won't reload) ──
     const formData = new FormData(form);
-    fetch('/', { method: 'POST', body: formData })
-      .catch(() => {}); // fire-and-forget; Netlify queues it
+    const data = new URLSearchParams();
+    for (const pair of formData) {
+      data.append(pair[0], pair[1]);
+    }
+    
+    fetch('/', { 
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data.toString()
+    }).catch(() => {}); // fire-and-forget; Netlify queues it
 
     // ── Show thank-you modal (candidate never sees score) ──
     document.querySelector('.result-overlay').classList.add('active');

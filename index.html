@@ -32,7 +32,7 @@
 
 <!-- FORM -->
 <div class="form-container">
-<form id="tuluForm" name="preseleccion-tulum" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+<form id="tuluForm" name="preseleccion-tulum" method="POST" netlify data-netlify-honeypot="bot-field" novalidate>
   <input type="hidden" name="form-name" value="preseleccion-tulum"/>
   <input type="hidden" name="bot-field" style="display:none"/>
   <!-- Campos de puntaje calculado (ocultos, visibles en Netlify) -->
@@ -92,6 +92,12 @@
     <div class="section-number">2</div>
     <h2 class="section-title">Estabilidad y Logística</h2>
     <span class="section-icon">📍</span>
+  </div>
+
+  <div style="background: rgba(26, 53, 96, 0.03); border: 1px solid rgba(26, 53, 96, 0.1); border-radius: 8px; padding: 16px; margin-bottom: 24px; font-size: 0.9rem; color: var(--navy); line-height: 1.5;">
+    <p style="margin-bottom: 8px;"><strong>📍 Nuestra Ubicación:</strong> <a href="https://maps.app.goo.gl/QgmvLmzABPDNiD8M8" target="_blank" style="color: #b8732e; text-decoration: underline; font-weight: 500;">Cl. 10 Sur #37b-32</a></p>
+    <p style="margin-bottom: 4px; color: var(--gray);">Barrio Ciudad Montes, Localidad Puente Aranda (Bogotá).</p>
+    <p style="color: var(--gray); font-size: 0.85rem;"><em>Barrios aledaños: Jazmín, Galán, Primavera, Santa Isabel y Comuneros.</em></p>
   </div>
 
   <div class="field-group">
@@ -243,12 +249,10 @@
   </div>
 
   <div class="field-group">
-    <label class="field-label required">Tipo de horario disponible</label>
-    <div class="options-grid">
-      <div class="option-card"><input type="radio" name="schedule_type" id="sch1" value="full" required/><label class="option-label" for="sch1"><span class="option-indicator"></span>Tiempo completo</label></div>
-      <div class="option-card"><input type="radio" name="schedule_type" id="sch2" value="part_am"/><label class="option-label" for="sch2"><span class="option-indicator"></span>Medio tiempo (mañana)</label></div>
-      <div class="option-card"><input type="radio" name="schedule_type" id="sch3" value="part_pm"/><label class="option-label" for="sch3"><span class="option-indicator"></span>Medio tiempo (tarde)</label></div>
-      <div class="option-card"><input type="radio" name="schedule_type" id="sch4" value="flex"/><label class="option-label" for="sch4"><span class="option-indicator"></span>Horario flexible</label></div>
+    <label class="field-label required">¿Estás de acuerdo con manejar turnos rotativos full time (Apertura 9am - 6pm / Cierre 11am - 8pm)?</label>
+    <div class="options-grid two-col">
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch1" value="agree" required/><label class="option-label" for="sch1"><span class="option-indicator"></span>Sí, estoy de acuerdo</label></div>
+      <div class="option-card"><input type="radio" name="schedule_type" id="sch2" value="disagree"/><label class="option-label" for="sch2"><span class="option-indicator"></span>No, busco otro horario</label></div>
     </div>
   </div>
 
